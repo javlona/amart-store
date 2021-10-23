@@ -70,6 +70,9 @@ p, a, span, h2{
     background: var(--secondary-color);
     padding: 5px;
 }
+.nav-bar ul li{
+    position: relative;
+}
 .nav-bar ul{
     display: flex;
     justify-content: space-between;
@@ -79,7 +82,34 @@ p, a, span, h2{
 .nav-bar a{
     color: #fff;
     font-size: 21px;
+}
+.nav-bar li:before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    transition: width .3s;
+}
+.nav-bar li::after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 1px;
+    width: 0;
+    top: 0;
+    right: 0;
+    transition: width .3s;
+}
+.nav-bar li:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
 
+.nav-bar li:hover::before{
+    width: 100%;
+    transition: width .3s;
 }
 /* ----------HERO---------- */
 .hero{
@@ -129,7 +159,25 @@ p, a, span, h2{
     border-radius: 10px;
     font-size: 27px;
     padding: 2px 25px;
+    position: relative;
+    z-index: 15;
 }
+.hero-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    background: rgba(255,255,255, .15);
+    width: 0;
+    z-index: 14;
+    transition: width .2s;
+}
+.hero-btn:hover::before{
+    width: 100%;
+    transition: width .3s;
+}
+
 /* ---------SLIDER--------- */
 .item{
     display: flex;
