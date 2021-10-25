@@ -1,3 +1,3 @@
 # Amart Online Store
 
-https://joeclaap.github.io/amart/
+https://javlona.github.io/amart/
