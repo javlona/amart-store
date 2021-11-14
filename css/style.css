@@ -207,9 +207,9 @@ p, a, span, h2{
 }
 
 .shop-btn:hover{
-    transform: translateY(-3px);
-    transition: all .3s;
-    background-color: #45ebb3;
+    /* transform: translateY(-3px); */
+    /* transition: all .3s; */
+    background-color: #0f805a;
 }
 /* .shop-btn:before, .shop-btn:after {
     position: absolute;
@@ -283,14 +283,18 @@ p, a, span, h2{
     border-bottom: 3px solid var(--btn-color);
     text-align: center;
     transition: all .3s ease-in-out;
+    transform-style: preserve-3d;
+    transform: perspective(1000px); 
 }
 .block:hover{
     transform: scale(1.05);
     transition: all .3s;
+    cursor: pointer;
 }
 .block-price a, .block-price h4{
     display: inline-block;
     padding: 7.5px;
+    transform: translateZ(20px);
 }
 /* ------------FOOTER---------------- */
 footer{
